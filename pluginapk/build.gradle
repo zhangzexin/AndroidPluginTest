@@ -68,3 +68,15 @@ dependencies {
     implementation project(path: ':PlugExtend')
 
 }
+
+task push_plugin(type: Copy) {
+    from './build/intermediates/apk/debug'
+    into '../app/src/main/assets/apk'
+    include 'pluginapk-debug.apk'
+}
+
+
+afterEvaluate() {
+    def assembleDebugTask = tasks.findByPath("assembleDebug")
+    assembleDebugTask.finalizedBy(push_plugin)
+}

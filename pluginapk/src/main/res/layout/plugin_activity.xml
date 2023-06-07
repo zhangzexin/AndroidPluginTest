@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.zzx.plugin.test.PluginAppCompatActivity"
     tools:ignore="UseCompoundDrawables">
 
     <Button
@@ -16,4 +15,10 @@
         android:textAllCaps="false"
         android:textColor="#ffffff"
         tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是新内容"
+        />
 </LinearLayout>
